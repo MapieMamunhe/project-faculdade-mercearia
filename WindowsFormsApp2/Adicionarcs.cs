@@ -46,11 +46,11 @@ namespace WindowsFormsApp2
                 //Adiciona o Produto
                 operacao.adicionarProduto(txtProdNome.Text, (float) upPreco.Value, txtProdMarca.Text, rxtDescricao.Text);
                 //Mensagem de confirmacao
-                MessageBox.Show(operacao.getMensagem, "Resposta da insercao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(operacao.getMensagem, "Resposta da inserção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Por favor preencha todos campos com valores validos", "Campos Vazios ou invalidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor preencha todos campos com valores válidos", "Campos Vazios ou inválidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

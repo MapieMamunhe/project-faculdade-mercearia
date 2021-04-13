@@ -287,9 +287,9 @@
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(16, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 15);
+            this.label3.Size = new System.Drawing.Size(124, 15);
             this.label3.TabIndex = 14;
-            this.label3.Text = "DADOS PRODUTO";
+            this.label3.Text = "DADOS DO PRODUTO";
             // 
             // menuStrip1
             // 

@@ -1,0 +1,75 @@
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Sun Apr 11 16:02:11 2021 +0200
+
+    A tabela de compras esta operacional, a base de dados mercearia esta agora com o collation utf8
+
+commit e650b5c6cc4f1c47641894576b4afd080502fe4b
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Fri Apr 9 16:49:47 2021 +0200
+
+    Modifiquei o README.txt e agora a tela de compra de produtos mostra informacoes mais relevantes
+
+commit 7bed75096c809955a83d0c8a8a1b44927d615485
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Fri Apr 9 01:32:01 2021 +0200
+
+    O botao de tabelas na area de menu esta agora conectada a base de dados
+
+commit 4ff0d8b475621077382d7c7596a85beb762401fc
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+:...skipping...
+commit 40bdfd0c0a9d31e2b97426107dd02fffc97cd837 (HEAD -> master, origin/master, origin/HEAD)
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Sun Apr 11 16:02:11 2021 +0200
+
+    A tabela de compras esta operacional, a base de dados mercearia esta agora com o collation utf8
+commit 40bdfd0c0a9d31e2b97426107dd02fffc97cd837 (HEAD -> master, origin/master, origin/HEAD)
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Sun Apr 11 16:02:11 2021 +0200
+
+    A tabela de compras esta operacional, a base de dados mercearia esta agora com o collation utf8
+
+commit e650b5c6cc4f1c47641894576b4afd080502fe4b
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Fri Apr 9 16:49:47 2021 +0200
+
+    Modifiquei o README.txt e agora a tela de compra de produtos mostra informacoes mais relevantes
+
+commit 7bed75096c809955a83d0c8a8a1b44927d615485
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Fri Apr 9 01:32:01 2021 +0200
+
+    O botao de tabelas na area de menu esta agora conectada a base de dados
+
+commit 4ff0d8b475621077382d7c7596a85beb762401fc
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Fri Apr 9 00:31:51 2021 +0200
+
+    A are de compra de produtos esta operacional e linkada a base de dados, acrescentei um menu novo na tela de compra de produtos
+
+commit 6999d601701b96c01b515414f8aef24257fa8a7a
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Thu Apr 8 17:00:17 2021 +0200
+
+    Botao consultar produtos esta operacional
+
+commit b0b340a4af632083a73b82451229861e6b73da59
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Thu Apr 8 16:28:09 2021 +0200
+
+    Melhorei as funcionalidades de adicionar, actualizar e terminei a configuracao de eliminar
+
+commit ca3d5d3a7f7a9d31fcbb98a85ab0a92c9ddcf91a
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Thu Apr 8 12:44:06 2021 +0200
+
+    Nova base de dados
+
+commit 895369ff9e786402bab1d75bad6ebcbf005d4036
+Author: Mapie Mamunhe <mmamunhe@gmail.com>
+Date:   Thu Apr 8 00:12:28 2021 +0200
+
+    A pesquisa da pagina eliminar esta agora operacional
+
+commit 8e5b28763f3272e6d90c97459d1ec8c505c4b3a1
+:

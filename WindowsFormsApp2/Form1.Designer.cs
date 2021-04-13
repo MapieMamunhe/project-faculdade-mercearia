@@ -52,7 +52,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(339, 99);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Adicionar Novo Produto\r\nEliminar / Atualizar";
+            this.button1.Text = "Adicionar Novo Produto\r\nEliminar / Actualizar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -65,7 +65,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(339, 99);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Realizar uma Comprar";
+            this.button2.Text = "Realizar uma Compra";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);

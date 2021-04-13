@@ -115,7 +115,7 @@ namespace WindowsFormsApp2
             {
                 comando.Connection = conexao.Conectar();
                 MySqlDataAdapter da = new MySqlDataAdapter(comando);
-                da.Fill(dt);
+                da.Fill(dt); ///
                 conexao.Desconectar();
             }
             catch (MySqlException)

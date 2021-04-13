@@ -59,7 +59,7 @@ namespace WindowsFormsApp2
             }
             catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("Nenhum Produto encontrado", "Informacao");
+                MessageBox.Show("Nenhum Produto encontrado", "Informação");
             }
         }
 
@@ -70,18 +70,18 @@ namespace WindowsFormsApp2
                 validar.Campo(txtNome.Text);
                 validar.Campo(txtMarca.Text);
                 validar.celulaSelecionada((int) upPreco.Value);
-                int c = (int) MessageBox.Show("Tem a certeza que deseja modificar essas informacoes?", "Aviso!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                int c = (int) MessageBox.Show("Tem a certeza que deseja modificar essas informações?", "Aviso!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (c == 6)
                 {
                     operacao.actualizarProduto((int)upID.Value, txtMarca.Text, txtNome.Text, (float)upPreco.Value);
-                    MessageBox.Show(operacao.getMensagem, "Relatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(operacao.getMensagem, "Relatório", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Actualizar lista de produtos
                     dtvProduto.DataSource = (operacao.pegaProdutoNome(prod));
                 }
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Preencha os campos com valores validos", "Campos invalidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Preencha os campos com valores válidos", "Campos inválidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

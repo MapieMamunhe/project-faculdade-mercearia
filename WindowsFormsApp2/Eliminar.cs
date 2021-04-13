@@ -64,11 +64,11 @@ namespace WindowsFormsApp2
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Preencha o campo", "Entrada invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Preencha o campo", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (FormatException)
             {
-                MessageBox.Show("Insira um numero Inteiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Insira um número Inteiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -84,7 +84,7 @@ namespace WindowsFormsApp2
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Por favor, primeiro selecione uma celula", "Nao selecionou uma celula", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor, primeiro selecione uma célula", "Não selecionou uma célula", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
