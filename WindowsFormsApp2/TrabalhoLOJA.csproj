@@ -72,6 +72,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_addCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_addCategoria.Designer.cs">
+      <DependentUpon>F_addCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_addCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_addCliente.Designer.cs">
+      <DependentUpon>F_addCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,12 @@
     </Compile>
     <Compile Include="F_finalizarCompra.Designer.cs">
       <DependentUpon>F_finalizarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Login.Designer.cs">
+      <DependentUpon>F_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Produtos.cs">
       <SubType>Form</SubType>
@@ -96,6 +114,7 @@
     <Compile Include="F_tabelaCompras.Designer.cs">
       <DependentUpon>F_tabelaCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs" />
     <Compile Include="Operacoes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,11 +131,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_addCategoria.resx">
+      <DependentUpon>F_addCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_addCliente.resx">
+      <DependentUpon>F_addCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_compra.resx">
       <DependentUpon>F_compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_finalizarCompra.resx">
       <DependentUpon>F_finalizarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Login.resx">
+      <DependentUpon>F_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Produtos.resx">
       <DependentUpon>F_Produtos.cs</DependentUpon>

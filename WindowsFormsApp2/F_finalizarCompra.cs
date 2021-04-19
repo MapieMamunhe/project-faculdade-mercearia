@@ -14,30 +14,14 @@ namespace WindowsFormsApp2
     {
         private Operacoes operacao = new Operacoes();
         private int quant, prod_cod;
-        private string nom, bi, tel;
-        public F_finalizarCompra(int prod_cod, float vPagar, int quant, string nom, string bi, string tel)
-        {
-            InitializeComponent();
-            lblVPagar.Text = vPagar.ToString();
-            this.nom = nom;
-            this.quant = quant;
-            this.bi = bi;
-            this.tel = tel;
-            this.prod_cod = prod_cod;
-
-        }
         public F_finalizarCompra(int prod_cod, float vPagar, int quant)
         {
             InitializeComponent();
             lblVPagar.Text = vPagar.ToString();
-            this.nom = "";
             this.quant = quant;
-            this.bi = "";
-            this.tel = "";
             this.prod_cod = prod_cod;
+
         }
-
-
         private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             float trocos = float.Parse(lblVPagar.Text) - (float)upVrecebido.Value;
@@ -50,8 +34,44 @@ namespace WindowsFormsApp2
                 lblTrocos.Text = ((-1)*trocos).ToString();
             } 
         }
+        private Validar validar = new Validar();
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pesquisarProduto("pesquisar");
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Cliente Nao encontrado", "Resposta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+        }
+        private void pesquisarProduto(string origem)
+        {
+            try
+            {
+                validar.Campo(txtDocNum.Text);
+                validar.Campo(cbDoc.Text);
+                string nr = operacao.docCliente(cbDoc.Text, txtDocNum.Text);
+                if (nr == txtDocNum.Text)
+                {
+                    if (origem.Equals("pesquisar"))
+                    {
+                        MessageBox.Show("Cliente Encontrado", "Resposta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    throw new FormatException();
+                }
+            }
+            catch (ArgumentException)
+            {
+            }
+            }
 
-        private void LblTrocos_Click(object sender, EventArgs e)
+            private void LblTrocos_Click(object sender, EventArgs e)
         {
 
         }
@@ -60,25 +80,36 @@ namespace WindowsFormsApp2
         {
             float vR = (float) upVrecebido.Value;
             float vP = float.Parse(lblVPagar.Text);
-            if (vR>=vP)
+            if ((vR>=vP))
             {
                 try
                 {
-                    if (string.IsNullOrEmpty(this.nom) || string.IsNullOrWhiteSpace(this.nom))
+                    if (vP == 0)
                     {
-                        operacao.adicionarCompra(prod_cod, quant, (float)upVrecebido.Value);
+                        throw new ArithmeticException();
                     }
-                    else
+                    int codCliente = 1;
+                    if (!string.IsNullOrEmpty(txtDocNum.Text))
                     {
-                        operacao.adicionarCompraCompleta(prod_cod, quant, (float)upVrecebido.Value, nom.Split(), bi, tel);
+                        pesquisarProduto("");
+                        codCliente = operacao.getCodCliente(cbDoc.Text, txtDocNum.Text);
                     }
+                    operacao.adicionarCompra(prod_cod, codCliente, quant, (float)upVrecebido.Value);
                     MessageBox.Show(operacao.getMensagem, "Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lblVPagar.Text = "0";
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Cliente Nao encontrado", "Resposta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (ArithmeticException)
+                {
+                    MessageBox.Show("O Pegamento ja foi efectuado", "Nada a pagar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Ocorreu um erro ao finalizar a compra", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                this.Close();
             }
             else
             {

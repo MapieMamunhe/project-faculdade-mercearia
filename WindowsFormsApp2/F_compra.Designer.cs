@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btn_cliente = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtBI = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCUltimoNome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCPrimeiroNome = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -71,51 +64,38 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 551);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 27);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Limpar Campos";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txtTel);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btn_cliente);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtBI);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtCUltimoNome);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtCPrimeiroNome);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 371);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(467, 141);
             this.panel1.TabIndex = 5;
             // 
-            // txtTel
+            // button5
             // 
-            this.txtTel.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel.Location = new System.Drawing.Point(350, 90);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(100, 23);
-            this.txtTel.TabIndex = 8;
+            this.button5.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(178, 46);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(109, 46);
+            this.button5.TabIndex = 24;
+            this.button5.Text = "Ver Clientes";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
-            // label9
+            // btn_cliente
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(276, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 15);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Telefone";
+            this.btn_cliente.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cliente.Location = new System.Drawing.Point(18, 44);
+            this.btn_cliente.Name = "btn_cliente";
+            this.btn_cliente.Size = new System.Drawing.Size(109, 46);
+            this.btn_cliente.TabIndex = 20;
+            this.btn_cliente.Text = "Novo Cliente";
+            this.btn_cliente.UseVisualStyleBackColor = true;
+            this.btn_cliente.Click += new System.EventHandler(this.Btn_cliente_Click);
             // 
             // label8
             // 
@@ -126,60 +106,6 @@
             this.label8.Size = new System.Drawing.Size(94, 15);
             this.label8.TabIndex = 23;
             this.label8.Text = "DADOS CLIENTE";
-            // 
-            // txtBI
-            // 
-            this.txtBI.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBI.Location = new System.Drawing.Point(109, 93);
-            this.txtBI.Name = "txtBI";
-            this.txtBI.Size = new System.Drawing.Size(150, 23);
-            this.txtBI.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 41);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Bilhete de Identidade Nº";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtCUltimoNome
-            // 
-            this.txtCUltimoNome.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCUltimoNome.Location = new System.Drawing.Point(350, 39);
-            this.txtCUltimoNome.Name = "txtCUltimoNome";
-            this.txtCUltimoNome.Size = new System.Drawing.Size(100, 23);
-            this.txtCUltimoNome.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(265, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Ultimo Nome";
-            // 
-            // txtCPrimeiroNome
-            // 
-            this.txtCPrimeiroNome.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPrimeiroNome.Location = new System.Drawing.Point(109, 39);
-            this.txtCPrimeiroNome.Name = "txtCPrimeiroNome";
-            this.txtCPrimeiroNome.Size = new System.Drawing.Size(150, 23);
-            this.txtCPrimeiroNome.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 15);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Primeiro Nome";
             // 
             // panel2
             // 
@@ -324,7 +250,6 @@
             this.ClientSize = new System.Drawing.Size(491, 581);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -346,15 +271,7 @@
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtBI;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCUltimoNome;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCPrimeiroNome;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtProduto;
@@ -368,7 +285,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tabelasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasEfectuadasToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_cliente;
+        private System.Windows.Forms.Label label8;
     }
 }
