@@ -29,7 +29,7 @@ CREATE TABLE `categoria` (
   `cat_nome` varchar(45) NOT NULL,
   `cat_descricao` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`cat_cod`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `categoria` (
 
 LOCK TABLES `categoria` WRITE;
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
-INSERT INTO `categoria` VALUES (1,'Alimento','Todo tipo de alimento');
+INSERT INTO `categoria` VALUES (1,'Alimento','Todo tipo de alimento'),(2,'Utensilios','Panelas, pratos, colheres e entre outros'),(3,'Electrodomesticos','Micro-ondas, liquidificadores, etc');
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +63,7 @@ CREATE TABLE `cliente` (
   `cliente_tel2` varchar(10) DEFAULT NULL,
   `cliente_email` varchar(45) NOT NULL,
   PRIMARY KEY (`cliente_cod`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +72,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
+INSERT INTO `cliente` VALUES (1,'Nao dado','Nao dado','Nao dado','Nao dado','Nao dado','Nao dado','Nao dado','Nao dado','Nao dado','Nao dado','Nao dado'),(2,'Mapie','Mamunhe','Passaporte','10005A','Machava','Bunhica','13','749','873854676','','mmamunhe@gmail.com');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,11 +87,11 @@ CREATE TABLE `compra` (
   `cod_prod` int(11) NOT NULL,
   `cod_cliente` int(11) NOT NULL,
   `compra_quant` int(11) DEFAULT NULL,
-  `compra_data` timestamp(6) NULL DEFAULT NULL,
+  `compra_data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `compra_valor_recebido` float DEFAULT NULL,
-  PRIMARY KEY (`cod_prod`,`cod_cliente`),
+  PRIMARY KEY (`cod_prod`,`cod_cliente`,`compra_data`),
   KEY `fk_cliente_cod_idx` (`cod_cliente`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,6 +100,7 @@ CREATE TABLE `compra` (
 
 LOCK TABLES `compra` WRITE;
 /*!40000 ALTER TABLE `compra` DISABLE KEYS */;
+INSERT INTO `compra` VALUES (1,1,1,'2021-04-19 14:10:37',1050),(1,1,1,'2021-04-19 14:13:53',1500),(1,1,1,'2021-04-19 14:14:49',1050),(1,1,1,'2021-04-19 14:31:42',1050),(1,1,1,'2021-04-19 14:33:04',2000),(1,2,1,'2021-04-19 14:35:29',1050);
 /*!40000 ALTER TABLE `compra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,6 +132,30 @@ LOCK TABLES `produto` WRITE;
 INSERT INTO `produto` VALUES (1,'Arroz','Mariana','Arroz Normal',1050,1);
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `nome` varchar(20) NOT NULL,
+  `senha` varchar(10) NOT NULL,
+  PRIMARY KEY (`nome`,`senha`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES ('Cliente','12345');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -140,4 +166,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-19  0:07:06
+-- Dump completed on 2021-04-19 22:46:05
