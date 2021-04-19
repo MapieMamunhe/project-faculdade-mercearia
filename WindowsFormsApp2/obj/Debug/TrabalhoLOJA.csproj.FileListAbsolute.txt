@@ -59,3 +59,6 @@ D:\MaterialUJC\UJC 2021 IV SEMESTRE\PROGRAMACAO C#\aulasProgramacao\project-facu
 D:\MaterialUJC\UJC 2021 IV SEMESTRE\PROGRAMACAO C#\aulasProgramacao\project-faculdade-mercearia\project-faculdade-mercearia\WindowsFormsApp2\obj\Debug\TrabalhoLOJA.csproj.CopyComplete
 D:\MaterialUJC\UJC 2021 IV SEMESTRE\PROGRAMACAO C#\aulasProgramacao\project-faculdade-mercearia\project-faculdade-mercearia\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 D:\MaterialUJC\UJC 2021 IV SEMESTRE\PROGRAMACAO C#\aulasProgramacao\project-faculdade-mercearia\project-faculdade-mercearia\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+D:\Faculdade\II ano\II Semestre\ProgramacaoC#\Codigos\Trabalhos\TrabalhoFinal\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.F_addCategoria.resources
+D:\Faculdade\II ano\II Semestre\ProgramacaoC#\Codigos\Trabalhos\TrabalhoFinal\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.F_addCliente.resources
+D:\Faculdade\II ano\II Semestre\ProgramacaoC#\Codigos\Trabalhos\TrabalhoFinal\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.F_Login.resources

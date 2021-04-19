@@ -77,19 +77,9 @@ namespace WindowsFormsApp2
                 validar.celulaSelecionada((int)upQuantidade.Value);
                 validar.celulaSelecionada(cod_prod);
                 valorPagar = (float)upQuantidade.Value * preco;
-                if (!(string.IsNullOrEmpty(txtCPrimeiroNome.Text) || (string.IsNullOrWhiteSpace(txtCPrimeiroNome.Text))))
-                {
-                    validar.Campo(txtBI.Text);
-                    validar.telefone(txtTel.Text);
-                    F_finalizarCompra fc = new F_finalizarCompra(cod_prod, valorPagar,(int) upQuantidade.Value, 
-                        txtCPrimeiroNome.Text+" "+txtCUltimoNome.Text, txtBI.Text, txtTel.Text);
-                    fc.ShowDialog();
-                }
-                else
-                {
-                    F_finalizarCompra fc = new F_finalizarCompra(cod_prod, valorPagar, (int)upQuantidade.Value);
-                    fc.ShowDialog();
-                }
+                F_finalizarCompra fc = new F_finalizarCompra(cod_prod, valorPagar, (int)upQuantidade.Value);
+                fc.ShowDialog();
+                
 
 
             }
@@ -113,10 +103,23 @@ namespace WindowsFormsApp2
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            txtCPrimeiroNome.Text = "";
-            txtCUltimoNome.Text = "";
-            txtBI.Text = "";
-            txtTel.Text = "";
+        }
+
+        private void Btn_cliente_Click(object sender, EventArgs e)
+        {
+            F_addCliente c = new F_addCliente();
+            c.FormClosed += (s, args) => this.Show();
+            this.Hide();
+            c.ShowDialog();
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            
+            DataTable clientes = operacao.clientes();
+            F_Produtos c = new F_Produtos(clientes, "Clientes");
+            c.ShowDialog();
+
         }
     }
 }

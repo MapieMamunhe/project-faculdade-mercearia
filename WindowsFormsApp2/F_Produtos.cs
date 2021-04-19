@@ -13,20 +13,24 @@ namespace WindowsFormsApp2
     public partial class F_Produtos : Form
     {
         private Operacoes operacao = new Operacoes();
-        public F_Produtos()
+        public F_Produtos(DataTable tabela, string origem)
         {
             InitializeComponent();
-        }
-
-        private void F_Produtos_Load(object sender, EventArgs e)
-        {
-            try{
-                dtvProdutos.DataSource = operacao.pegaTabelaProduto();
+            try
+            {
+                dtvProdutos.DataSource = tabela;
+                this.lblTitulo.Text = "Tabela dos "+origem+" Cadastrados";
+                this.Text = origem;
             }
             catch (Exception)
             {
                 MessageBox.Show("Erro ao mostrar tabela Produto");
             }
+        }
+
+        private void F_Produtos_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

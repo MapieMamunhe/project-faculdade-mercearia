@@ -42,6 +42,9 @@
             this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.upPreco = new System.Windows.Forms.NumericUpDown();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btn_addCategora = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upPreco)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +62,7 @@
             // txtProdNome
             // 
             this.txtProdNome.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdNome.Location = new System.Drawing.Point(153, 139);
+            this.txtProdNome.Location = new System.Drawing.Point(153, 111);
             this.txtProdNome.Name = "txtProdNome";
             this.txtProdNome.Size = new System.Drawing.Size(215, 29);
             this.txtProdNome.TabIndex = 2;
@@ -68,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 142);
+            this.label2.Location = new System.Drawing.Point(9, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 21);
             this.label2.TabIndex = 3;
@@ -78,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(92, 193);
+            this.label3.Location = new System.Drawing.Point(92, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 21);
             this.label3.TabIndex = 4;
@@ -126,7 +129,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 285);
+            this.label6.Location = new System.Drawing.Point(12, 285);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 21);
             this.label6.TabIndex = 10;
@@ -184,12 +187,46 @@
             this.upPreco.Size = new System.Drawing.Size(120, 25);
             this.upPreco.TabIndex = 13;
             // 
+            // cbCategoria
+            // 
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(153, 166);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbCategoria.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 166);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 21);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Categoria Produto";
+            // 
+            // btn_addCategora
+            // 
+            this.btn_addCategora.BackColor = System.Drawing.Color.DarkOrange;
+            this.btn_addCategora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addCategora.Font = new System.Drawing.Font("Leelawadee UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addCategora.Location = new System.Drawing.Point(295, 158);
+            this.btn_addCategora.Name = "btn_addCategora";
+            this.btn_addCategora.Size = new System.Drawing.Size(73, 41);
+            this.btn_addCategora.TabIndex = 17;
+            this.btn_addCategora.Text = "Nova Categoria";
+            this.btn_addCategora.UseVisualStyleBackColor = false;
+            this.btn_addCategora.Click += new System.EventHandler(this.Btn_addCategora_Click);
+            // 
             // F_Adicionar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(380, 526);
+            this.Controls.Add(this.btn_addCategora);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.upPreco);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -207,6 +244,7 @@
             this.Name = "F_Adicionar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar";
+            this.Load += new System.EventHandler(this.F_Adicionar_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upPreco)).EndInit();
@@ -231,5 +269,8 @@
         private System.Windows.Forms.ToolStripMenuItem actualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown upPreco;
+        private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btn_addCategora;
     }
 }

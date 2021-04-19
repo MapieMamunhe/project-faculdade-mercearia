@@ -33,10 +33,11 @@ namespace WindowsFormsApp2
             fc.Show();
             this.Hide();
         }
+        private Operacoes operacao = new Operacoes();
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            F_Produtos fp = new F_Produtos();
+            F_Produtos fp = new F_Produtos(operacao.pegaTabelaProduto(), "Produtos");
             fp.FormClosed += (s, args) => this.Show();
             fp.Show();
             this.Hide();

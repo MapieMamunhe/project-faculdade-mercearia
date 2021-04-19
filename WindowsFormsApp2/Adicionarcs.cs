@@ -42,9 +42,10 @@ namespace WindowsFormsApp2
                 validar.Campo(txtProdNome.Text);
                 validar.Campo(txtProdMarca.Text);
                 validar.Campo(rxtDescricao.Text);
+                validar.Campo(cbCategoria.Text);
                 validar.celulaSelecionada((int) upPreco.Value);
                 //Adiciona o Produto
-                operacao.adicionarProduto(txtProdNome.Text, (float) upPreco.Value, txtProdMarca.Text, rxtDescricao.Text);
+                operacao.adicionarProduto(txtProdNome.Text, (float) upPreco.Value, txtProdMarca.Text, rxtDescricao.Text, int.Parse(cbCategoria.Text));
                 //Mensagem de confirmacao
                 MessageBox.Show(operacao.getMensagem, "Resposta da inserção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -52,6 +53,21 @@ namespace WindowsFormsApp2
             {
                 MessageBox.Show("Por favor preencha todos campos com valores válidos", "Campos Vazios ou inválidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void F_Adicionar_Load(object sender, EventArgs e)
+        {
+            string []categorias = operacao.pegaCodCategoria().Split();
+            cbCategoria.Items.AddRange(categorias);
+        }
+
+        private void Btn_addCategora_Click(object sender, EventArgs e)
+        {
+            F_addCategoria c = new F_addCategoria();
+            c.FormClosed += (s, args) => this.Show();
+            this.Hide();
+            c.ShowDialog();
+            
         }
     }
 }
