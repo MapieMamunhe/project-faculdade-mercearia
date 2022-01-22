@@ -1,4 +1,4 @@
-#Mercearia - Venda de Produtos
+# Mercearia - Venda de Produtos
 #Descricao
 No menu principal(Form1) se encontram 3 botoes (button1 a 3)
 - O button1 leva para a tela de adicionar um novo produto
